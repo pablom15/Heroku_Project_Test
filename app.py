@@ -3,12 +3,18 @@
 import pickle
 import numpy as np
 from flask import Flask, render_template, request, redirect
+from flask_sqlalchemy import SQLAlchemy
+
 
 def time_convert(x):
     h,m,s = map(int,x.split(':'))
     return (h*360)+(m*60)+s
 
 app = Flask(__name__)
+
+app.config["DATABASE_URL"] = "postgres://ttsskopxdmnsfo:4378043c6d59d120e32dd53458a7b496edba8ae3199207429f3709d03c59db82@ec2-52-203-165-126.compute-1.amazonaws.com:5432/d4arif9evev4vq"
+postgres = SQLAlchemy(app)
+
 # start home page
 @app.route("/")
 def index():
