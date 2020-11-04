@@ -1,3 +1,8 @@
+# adding files to ignore
+.DS*
+/dataRaw
+config.js
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
