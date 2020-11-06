@@ -58,10 +58,10 @@ def predict():
 
 @app.route('/findings')
 def findings():
-    return render_template('findings.html')
+    return render_template('templates/findings.html')
 
 @app.route('/methodology')
 def methodology():
-    return render_template('methodology.html')
+    return render_template('templates/methodology.html')
 if __name__ == "__main__":
     app.run()
